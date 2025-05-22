@@ -1,33 +1,23 @@
 #include <stdio.h>
 
 int main() {
-    int num[6];
+    int score[3][4];
+    int max[4] = {0};
 
-    printf("input 6 values: ");
-    for (int i=0; i<6; i++) {
-        scanf("%d", &num[i]);
-    }
-
-    for (int i=5; i>0; i--) {
-        int max=0;
-        for (int j=1; j<=i; j++) {
-            if(num[j]>num[max]){
-                max=j;
+    for (int i = 0; i < 3; i++) {
+        printf("input No.%d\n", i + 1);
+        for (int j = 0; j < 4; j++) {
+            scanf("%d", &score[i][j]);
+            if (i == 0 || score[i][j] > max[j]) {
+                max[j] = score[i][j];
             }
         }
-
-        if (max!=i) {
-            int tmp=num[i];
-            num[i]=num[max];
-            num[max]=tmp;
-        }
     }
 
-    printf("result: ");
-    for (int i=0; i<6; i++) {
-        printf("%d ", num[i]);
-    }
-    printf("\n");
+    printf("English: %d\n", max[0]);
+    printf("Math: %d\n", max[1]);
+    printf("Physics: %d\n", max[2]);
+    printf("Experiment: %d\n", max[3]);
 
     return 0;
 }
