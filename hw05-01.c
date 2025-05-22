@@ -1,32 +1,33 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
-    int num[6],a;
+int main() {
+    int numbers[6];
 
-    printf("input 6 numbers\n");
-    scanf("%d %d %d %d %d %d",&num[0],&num[1],&num[2],&num[3],&num[4],&num[5]);
+    printf("input 6 values: ");
+    for (int i=0; i<6; i++) {
+        scanf("%d", &numbers[i]);
+    }
 
-    for(int i=0;i<5;i++){
-        int min=i;
-        for(int j=i+1;j<6;j++){
-            if(num[j]<num[min]){
-                min=j;
+    for (int i=5; i>0; i--) {
+        int max_idx=0;
+        for (int j=1; j<=i; j++) {
+            if(numbers[j]>numbers[max_idx]){
+                max_idx=j;
             }
         }
-        if(min!=i){
-            a=num[i];
-            num[i]=num[min];
-            num[min]=a;
+
+        if (max_idx!=i) {
+            int temp=numbers[i];
+            numbers[i]=numbers[max_idx];
+            numbers[max_idx]=temp;
         }
     }
 
     printf("result: ");
-    
-    for(int i=0;i<6;i++){
-        printf("%d ",num[i]);
+    for (int i=0; i<6; i++) {
+        printf("%d ", numbers[i]);
     }
-
     printf("\n");
-    
+
     return 0;
 }
