@@ -5,8 +5,8 @@
 
 ## ファイル命名規則
 
-- `HW[授業回]-[課題番号]`  
-  例: `HW02-01`（第2回・課題1）
+- `hw[授業回]-[課題番号]`  
+  例: `hw02-01`（第2回・課題1）
 
 ## ディレクトリ構成
 
@@ -17,7 +17,7 @@
 
 - Mac用実行ファイルは`Mach-O`形式で`MacExecute/`にあります。
 - Windows用実行ファイルは`.exe`形式で`WinExecute/`にあります。
-- Apple Silicon MacおよびARM Windowsでのみテストしています。
+- Apple Silicon MacおよびWindows(x86-64,ARM)でのみテストしています。
 
 ## 注意事項
 
