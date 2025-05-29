@@ -6,7 +6,7 @@ int main(){
     char display[100];
     char input[100];
 
-    int i=0, j=0, count=0;
+    int i=0, count=0;
     int len=strlen(ans);
     for(i=0; i<len; i++){
         display[i]='*';
@@ -18,15 +18,20 @@ int main(){
         printf("%s\n", display);
         printf("input: ");
         scanf("%s", input);
+
+        if(strlen(input) != len){
+            printf("Error\n");
+            continue;
+        }
+
         count++;
+
         for(i=0; i<len; i++){
-            for(j=0; input[j]!='\0'; j++){
-                if(input[j]==ans[i]){
-                    display[i]=ans[i];
-                    break;
-                }
+            if(input[i] == ans[i]){
+                display[i] = ans[i];
             }
         }
+
         if(strcmp(display, ans)==0){
             break;
         }
