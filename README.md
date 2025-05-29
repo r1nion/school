@@ -24,6 +24,8 @@
 - 各実行ファイルは対応するプラットフォーム（MacまたはWindows）でのみ動作確認を行っています。
 - 他の環境での動作は保証していません。
 
+## その他
+- ターミナル等にて `git pull https://github.com/r1nion/school`で、ローカル環境にコピーできます。(Gitが入っていない場合はできません。その時は調べてください。)
 ---
 
 何かご不明な点があれば[Issue](https://github.com/r1nion/school/issues)からご連絡ください。
