@@ -10,6 +10,7 @@
 
 ## ディレクトリ構成
 
+- `codes/` : ソースコード
 - `MacExecute/` : Mac用実行ファイル
 - `WinExecute/` : Windows用実行ファイル（.exe形式）
 
