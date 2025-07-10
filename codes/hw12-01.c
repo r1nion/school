@@ -1,9 +1,11 @@
 #include<stdio.h>
 
 void swap(int *a,int *b){
-    int tmp=*a;
-    *a=*b;
-    *b=tmp;
+    if(*a>*b){
+        int tmp=*a;
+        *a=*b;
+        *b=tmp;
+    }
 }
 
 int main(){
@@ -14,9 +16,7 @@ int main(){
 
     for(i=5;i>0;i--) {
         for(j=0;j<i;j++) {
-            if(n[j]>n[j+1]){
-                swap(&n[j],&n[j+1]);
-            }
+            swap(&n[j],&n[j+1]);
         }
     }
 
