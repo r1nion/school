@@ -4,3 +4,5 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 .DS_Store
+input.txt
+result.txt
